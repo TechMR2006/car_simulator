@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Traffic - 3D Car Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Game Container -->
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <!-- UI Overlay -->
+    <div id="ui-overlay">
+        <!-- Score Display -->
+        <div id="score-display">
+            <div class="score-box">
+                <span class="label">SCORE</span>
+                <span id="current-score">0</span>
+            </div>
+            <div class="score-box">
+                <span class="label">BEST</span>
+                <span id="best-score">0</span>
+            </div>
+        </div>
+
+        <!-- Speed Display -->
+        <div id="speed-display">
+            <span id="speed-value">0</span>
+            <span class="unit">km/h</span>
+        </div>
+
+        <!-- Controls Hint -->
+        <div id="controls-hint">
+            <div class="key"><span>←</span> Left</div>
+            <div class="key"><span>→</span> Right</div>
+            <div class="key"><span>SPACE</span> Brake</div>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <div class="screen-content">
+            <h1>ENDLESS TRAFFIC</h1>
+            <p class="subtitle">3D Car Simulator</p>
+            <div class="instructions">
+                <p>Avoid traffic and survive as long as possible!</p>
+                <div class="controls-list">
+                    <div class="control-item">
+                        <span class="key">← →</span>
+                        <span>Move Left/Right</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">SPACE</span>
+                        <span>Brake</span>
+                    </div>
+                </div>
+            </div>
+            <button id="start-btn" class="btn-primary">START ENGINE</button>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+        <div class="screen-content">
+            <h1>GAME OVER</h1>
+            <div class="final-stats">
+                <div class="stat">
+                    <span class="stat-label">Final Score</span>
+                    <span id="final-score" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Best Score</span>
+                    <span id="final-best-score" class="stat-value">0</span>
+                </div>
+            </div>
+            <button id="restart-btn" class="btn-primary">TRY AGAIN</button>
+        </div>
+    </div>
+
+    <!-- Main Game Script -->
+    <script src="main.js"></script>
+</body>
+</html>
